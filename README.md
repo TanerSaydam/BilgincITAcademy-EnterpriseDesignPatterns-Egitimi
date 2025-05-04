@@ -17,21 +17,27 @@
 - [Inheritance (Kalıtım)](#-inheritance-kalıtım)
 - [Polymorphism (Çok Biçimlilik)](#-flexibility--polymorphism-esneklik-ve-çok-biçimlilik)
 - [Abstraction (Soyutlama)](#-abstraction-soyutlama)
-- [Decorator Pattern](#-decorator-pattern)
-- [Facade Pattern](#-facade-pattern)
-- [Proxy Pattern](#-proxy-pattern)
-- [Adapter Pattern](#-adapter-pattern)
-- [Bridge Pattern](#-bridge-pattern)
+- [Interface (Arayüzler)](#-interface-arayüzler)
+- [Generic Class ve Static Class](#-generic-class-ve-static-class)
+- [SOLID Prensipleri](#-solid-prensipleri)
+- [Dependency Injection](#-dependency-injection-nedir)
+- [What is the Design Pattern?](#-what-is-the-design-pattern)
+- [Anti-Pattern Nedir?](#-what-is-the-anti-pattern)
+- [Singleton Pattern](#-singleton-pattern)
+- [Factory Method Pattern](#-factory-method-pattern)
+- [Abstract Factory Pattern](#-abstract-factory-pattern)
+- [Builder Pattern](#-builder-pattern)
+- [Prototype Pattern](#-prototype-pattern)
 - [State Pattern](#-state-pattern)
 - [Observer Pattern](#-observer-pattern)
 - [Strategy Pattern](#-strategy-pattern)
 - [Command Pattern](#-command-pattern)
 - [Mediator Pattern](#-mediator-pattern)
-- [Factory Method Pattern](#-factory-method-pattern)
-- [Abstract Factory Pattern](#-abstract-factory-pattern)
-- [Builder Pattern](#-builder-pattern)
-- [Prototype Pattern](#-prototype-pattern)
-- [Singleton Pattern](#-singleton-pattern)
+- [Decorator Pattern](#-decorator-pattern)
+- [Facade Pattern](#-facade-pattern)
+- [Proxy Pattern](#-proxy-pattern)
+- [Adapter Pattern](#-adapter-pattern)
+- [Bridge Pattern](#-bridge-pattern)
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1335,79 +1341,7 @@ checkbox.Render();
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-# ❓ Abstract Factory vs Factory Method — Neden Abstract Class veya Interface?
 
----
-
-## 📌 Factory Method Pattern’de Neden Abstract Class Kullandık?
-
-Factory Method Pattern’de şunu yapıyoruz:
-✅ Üst sınıfta (`abstract class`) bir **factory method** tanımlıyoruz.
-✅ Alt sınıflar bu methodu **override** ederek hangi nesneyi yaratacaklarını belirliyor.
-
-Burada abstract class kullanmamızın nedeni:
-- Ortak bir **temel mantık** ve yapı sunmak.
-- Yaratımın detaylarını alt sınıflara bırakmak.
-
-### Örnek:
-```csharp
-public abstract class NotificationFactory
-{
-    public abstract INotification CreateNotification();
-}
-```
-
-Burada:
-- Üst sınıf → bir çerçeve sunar.
-- Alt sınıf → sadece hangi nesnenin yaratılacağını belirler.
-
----
-
-## 📌 Abstract Factory Pattern’de Neden Interface Kullandık?
-
-Abstract Factory Pattern bir **fabrika ailesi** tanımlar, yani:
-✅ Birden fazla ilişkili nesneyi bir arada yaratabilen bir fabrika seti.
-✅ Her fabrika belirli bir aileye (örn. Windows, Mac) ait.
-
-Burada interface kullanmamızın nedeni:
-- Ortak bir **mantık paylaşımı** gerekmez.
-- Sadece bir sözleşme (contract) gerekir → örneğin `CreateButton()`, `CreateCheckbox()` methodları olacak.
-
-### Örnek:
-```csharp
-public interface IGUIFactory
-{
-    IButton CreateButton();
-    ICheckbox CreateCheckbox();
-}
-```
-
-Burada:
-- Interface → sadece ne yapılacağını tanımlar.
-- Her fabrika → kendi bağımsız implementasyonunu sağlar.
-
----
-
-## 🔍 Özet Tablo
-
-| Pattern                  | Neden Abstract Class / Interface?                                                                      |
-|--------------------------|--------------------------------------------------------------------------------------------------------|
-| **Factory Method**       | Ortak üst sınıf mantığı taşımak, sadece yaratımı alt sınıfa bırakmak → `abstract class` tercih edilir. |
-| **Abstract Factory**     | Yalnızca bir sözleşme (hangi methodlar olacak) tanımlamak, mantık paylaşımı yok → `interface` tercih edilir. |
-
----
-
-## 💡 Önemli Not
-
-Bu bir **kural** değil, bir tercihtir!
-
-Her iki pattern için de:
-- Abstract class yerine interface kullanılabilir.
-- Interface yerine abstract class kullanılabilir.
-
-Tercih, tasarımın ihtiyacına ve mantık paylaşımına göre belirlenir.
-
----------------------------------------------------------------------------------------------------------------------------------------
 
 # 🏗 Builder Pattern
 
