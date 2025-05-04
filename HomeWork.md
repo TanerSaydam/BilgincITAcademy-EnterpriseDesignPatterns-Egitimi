@@ -1,6 +1,24 @@
 # Ders enasında pratik yapmak için sorular
 
-## 📝 Singleton Design Pattern Sorusu
+# 📑 İçindekiler
+
+- [Singleton Design Pattern Sorusu](#-singleton-design-pattern-sorusu)
+- [Factory Method Sorusu](#-factory-method-sorusu)
+- [Abstract Factory Pattern Sorusu](#-abstract-factory-pattern-sorusu)
+- [Builder Pattern Sorusu](#-builder-pattern-sorusu)
+- [Prototype Pattern Sorusu](#-prototype-pattern-sorusu)
+- [State Pattern Sorusu](#-state-pattern-sorusu)
+- [Observer Pattern Sorusu](#-observer-pattern-sorusu)
+- [Strategy Pattern Sorusu](#-strategy-pattern-sorusu)
+- [Command Pattern Sorusu](#-command-pattern-sorusu)
+- [Mediator Pattern Sorusu](#-mediator-pattern-sorusu)
+- [Decorator Pattern Sorusu](#-decorator-pattern-sorusu)
+- [Facade Pattern Sorusu](#-facade-pattern-sorusu)
+- [Proxy Pattern Sorusu](#-proxy-pattern-sorusu)
+- [Adapter Pattern Sorusu](#-adapter-pattern-sorusu)
+- [Bridge Pattern Sorusu](#-bridge-pattern-sorusu)
+
+# 📝 Singleton Design Pattern Sorusu
 
 Bir **ConfigurationManager** sınıfı tasarlamak istiyorsun.
 Bu sınıf uygulama boyunca tek bir yerde tutulacak ve `GetSetting(string key)` methoduyla ayarları döndürecek.
@@ -55,7 +73,7 @@ Console.WriteLine(appName); // Çıktı: MyApp
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📝 Factory Method Sorusu
+# 📝 Factory Method Sorusu
 
 Bir **Shape Drawing** uygulaması yapıyorsun.
 Kullanıcı Circle veya Rectangle seçebiliyor ve bu şekilleri ekrana çizebiliyorsun.
@@ -118,7 +136,7 @@ shape.Draw(); // Çıktı: Drawing Circle
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Abstract Factory Pattern Sorusu
+# 📘 Abstract Factory Pattern Sorusu
 
 Bir mobilya mağazası uygulaması tasarlıyorsun.
 Modern ve Viktoryan tarzda masa (`Table`) ve sandalye (`Chair`) takımları satıyorsun.
@@ -189,7 +207,7 @@ table.PlaceItems();   // Çıktı: Placing items on modern table.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Builder Pattern Sorusu
+# 📘 Builder Pattern Sorusu
 
 Bir **Burger** sınıfı tasarlıyorsun.
 Burger içinde ekmek tipi, et tipi, peynir var/yok, sebzeler var/yok gibi özellikler olacak.
@@ -262,7 +280,7 @@ Console.WriteLine(burger); // Çıktı: Burger with Sesame bread, Beef meat, Che
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Prototype Pattern Sorusu
+# 📘 Prototype Pattern Sorusu
 
 Bir **Shape** sınıfı tasarlıyorsun.
 Bu sınıfın Circle ve Rectangle alt sınıfları var.
@@ -325,7 +343,7 @@ clonedRect.Draw();   // Çıktı: Drawing Rectangle 10x20
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 State Pattern Sorusu
+# 📘 State Pattern Sorusu
 
 Bir **TrafficLight** (trafik lambası) sınıfı tasarlıyorsun.
 Durumlar: Green → Yellow → Red → Green.
@@ -417,7 +435,7 @@ light.Report(); // Green Light
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Observer Pattern Sorusu
+# 📘 Observer Pattern Sorusu
 
 Bir **Stock** sınıfın var.
 Bağlı olan alıcılar (observers), stok fiyatı değiştiğinde otomatik bildirim almak istiyor.
@@ -496,7 +514,7 @@ stock.SetPrice(100m);
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Strategy Pattern Sorusu
+# 📘 Strategy Pattern Sorusu
 
 Bir **TextFormatter** sınıfı tasarlıyorsun.
 Metni ya büyük harfe ya küçük harfe ya da baş harfi büyük olacak şekilde formatlaması gerekiyor.
@@ -504,7 +522,7 @@ Strategy Pattern kullanarak nasıl bir yapı kurarsın?
 
 ---
 
-### 📗 Strategy Pattern Sorunun Cevabı
+## 📗 Strategy Pattern Sorunun Cevabı
 
 ```csharp
 public interface ITextFormatter
@@ -563,7 +581,7 @@ editor.Print("hello world"); // Çıktı: Hello World
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Command Pattern Sorusu
+# 📘 Command Pattern Sorusu
 
 Bir **TextEditor** sınıfın var.
 Yapabileceğin işlemler: `Copy`, `Paste`, `Undo`.
@@ -664,7 +682,7 @@ invoker.PressButton(); // Çıktı: Undo last action
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Mediator Pattern Sorusu
+# 📘 Mediator Pattern Sorusu
 
 Bir **AirTrafficControl** (hava trafik kontrol) sistemi tasarlıyorsun.
 Uçaklar (Planes) doğrudan birbirine sinyal göndermek yerine, tüm iletişimi bir `Tower` üzerinden yürütmeli.
@@ -718,7 +736,7 @@ plane2.Send("Cleared for takeoff.", "Tower"); // Çıktı: Tower relays from Pla
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Decorator Pattern Sorusu
+# 📘 Decorator Pattern Sorusu
 
 Bir **Text** sınıfın var.
 Temel metni alıp, isteğe bağlı olarak onu **bold**, **italic** veya **underline** formatlarıyla genişletebileceğin bir yapı kur.
@@ -796,7 +814,7 @@ Console.WriteLine(text.Render());
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Facade Pattern Sorusu
+# 📘 Facade Pattern Sorusu
 
 Bir **Computer** sınıfın var.
 Bileşenleri: CPU, Memory, HardDrive.
@@ -864,7 +882,7 @@ computer.Start();
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Proxy Pattern Sorusu
+# 📘 Proxy Pattern Sorusu
 
 Bir **BankAccount** sınıfın var, ama bakiyeyi göstermek isteyen herkesin doğrudan erişimi olmasın.
 Proxy Pattern kullanarak, sadece yetkili kullanıcıların `ShowBalance()` çağırabilmesini nasıl sağlarsın?
@@ -925,7 +943,7 @@ account.ShowBalance(); // Çıktı: Access denied: insufficient permissions.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Adapter Pattern Sorusu
+# 📘 Adapter Pattern Sorusu
 
 Bir **MediaPlayer** arayüzün var, sadece `PlayAudio()` methodunu bekliyor.
 Ama elinde sadece `VideoPlayer` sınıfı var ve `PlayVideo()` methodu var.
@@ -973,7 +991,7 @@ mediaPlayer.PlayAudio(); // Çıktı: Playing video (with audio).
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 📘 Bridge Pattern Sorusu
+# 📘 Bridge Pattern Sorusu
 
 Bir **RemoteControl** sınıfın var.
 Televizyon (`TV`) ve Radyo (`Radio`) gibi cihazları kontrol edebilmesi gerekiyor.
