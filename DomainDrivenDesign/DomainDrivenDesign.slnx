@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/" Id="02ea681e-c7d8-13c7-8484-4ac65e1b71e8">
+    <Project Path="DomainDrivenDesign.Application/DomainDrivenDesign.Application.csproj" Id="3715eb0d-b5a0-4859-a8e6-331955686b79" />
+    <Project Path="src/DomainDrivenDesign.Domain/DomainDrivenDesign.Domain.csproj" Id="ae08316a-84b3-4236-86c7-ddce2b902f18" />
+  </Folder>
+  <Folder Name="/tests/" Id="74634377-bf1e-4b59-bf26-674cf4b206eb" />
+</Solution>
