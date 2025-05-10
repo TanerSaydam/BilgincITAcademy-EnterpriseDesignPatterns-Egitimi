@@ -1,5 +1,6 @@
 # Bilginç IT Academy - Enterprise Desin Patterns ve Architectures Eğitimi
 
+
 # 📑 İçindekiler
 
 - [OOP (Object-Oriented Programming) Nedir?](#oop-object-oriented-programming-nedir)

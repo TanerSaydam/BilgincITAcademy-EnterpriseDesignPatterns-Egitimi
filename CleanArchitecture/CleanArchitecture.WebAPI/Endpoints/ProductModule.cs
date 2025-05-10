@@ -7,7 +7,7 @@ public static class ProductModule
 {
     public static IEndpointRouteBuilder MapProducts(this IEndpointRouteBuilder builder)
     {
-        var app = builder.MapGroup("products");
+        var app = builder.MapGroup("products").RequireAuthorization().RequireRateLimiting("fixed");
 
         app.MapPost(string.Empty,
             async (
@@ -19,6 +19,16 @@ public static class ProductModule
                 return Results.Ok(res);
             })
             .Produces<Guid>();
+
+        app.MapGet(string.Empty,
+            async (
+                ISender sender,
+                CancellationToken cancellationToken) =>
+            {
+                var res = await sender.Send(new ProductGetAllQuery(), cancellationToken);
+                return Results.Ok(res);
+            })
+            .Produces<List<ProductGetAllQueryResponse>>();
 
         return app;
     }

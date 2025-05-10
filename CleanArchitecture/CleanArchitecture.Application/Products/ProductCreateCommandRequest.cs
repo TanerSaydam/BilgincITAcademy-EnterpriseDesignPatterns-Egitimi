@@ -24,7 +24,7 @@ internal sealed class ProductCreateCommandRequestHandler(
 
         Product product = request.Adapt<Product>();
 
-        // await productRepository.CreateAsync(product);
+        await productRepository.CreateAsync(product);
 
         return product.Id;
     }

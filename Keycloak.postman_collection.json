@@ -1,0 +1,2039 @@
+{
+	"info": {
+		"_postman_id": "f6d40f45-ce7f-424e-a488-57ef295862c0",
+		"name": "Keycloak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7844872"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/users",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/users",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "388",
+									"type": "text"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"c9572713-812e-4512-a62f-eefcf10e6394\",\n        \"username\": \"taner\",\n        \"firstName\": \"Taner\",\n        \"lastName\": \"Saydam\",\n        \"email\": \"tanersaydam@gmail.com\",\n        \"emailVerified\": true,\n        \"createdTimestamp\": 1722715131829,\n        \"enabled\": true,\n        \"totp\": false,\n        \"disableableCredentialTypes\": [],\n        \"requiredActions\": [],\n        \"notBefore\": 0,\n        \"access\": {\n            \"manageGroupMembership\": true,\n            \"view\": true,\n            \"mapRoles\": true,\n            \"impersonate\": true,\n            \"manage\": true\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"firstName\" :\"Test\",\r\n    \"lastName\":\"Kullanıcı\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/users",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"test\",\r\n    \"firstName\" :\"Test\",\r\n    \"lastName\":\"Kullanıcı\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/users",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/admin/realms/myrealm/users/fca058a5-35b1-4f11-9bb9-276b476f8271",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "0",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"firstName\" :\"Test\",\r\n    \"lastName\":\"Kullanıcı\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/users/fca058a5-35b1-4f11-9bb9-276b476f8271",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"users",
+								"fca058a5-35b1-4f11-9bb9-276b476f8271"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"test\",\r\n    \"firstName\" :\"Test\",\r\n    \"lastName\":\"Kullanıcı\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/users/fca058a5-35b1-4f11-9bb9-276b476f8271",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"users",
+										"fca058a5-35b1-4f11-9bb9-276b476f8271"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"taner\",\r\n    \"firstName\" :\"Taner\",\r\n    \"lastName\":\"Saydam\",\r\n    \"email\": \"tanersaydam@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/users/fca058a5-35b1-4f11-9bb9-276b476f8271",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"users",
+								"fca058a5-35b1-4f11-9bb9-276b476f8271"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"taner\",\r\n    \"firstName\" :\"Taner\",\r\n    \"lastName\":\"Saydam\",\r\n    \"email\": \"tanersaydam@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/users/fca058a5-35b1-4f11-9bb9-276b476f8271",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"users",
+										"fca058a5-35b1-4f11-9bb9-276b476f8271"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"taner\",\r\n    \"firstName\" :\"Taner\",\r\n    \"lastName\":\"Saydam\",\r\n    \"email\": \"tanersaydam@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/users/c9572713-812e-4512-a62f-eefcf10e6394",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"users",
+								"c9572713-812e-4512-a62f-eefcf10e6394"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"taner\",\r\n    \"firstName\" :\"Taner\",\r\n    \"lastName\":\"Saydam\",\r\n    \"email\": \"tanersaydam@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/users/c9572713-812e-4512-a62f-eefcf10e6394",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"users",
+										"c9572713-812e-4512-a62f-eefcf10e6394"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "386",
+									"type": "text"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"c9572713-812e-4512-a62f-eefcf10e6394\",\n    \"username\": \"taner\",\n    \"firstName\": \"Taner\",\n    \"lastName\": \"Saydam\",\n    \"email\": \"tanersaydam@gmail.com\",\n    \"emailVerified\": true,\n    \"createdTimestamp\": 1722715131829,\n    \"enabled\": true,\n    \"totp\": false,\n    \"disableableCredentialTypes\": [],\n    \"requiredActions\": [],\n    \"notBefore\": 0,\n    \"access\": {\n        \"manageGroupMembership\": true,\n        \"view\": true,\n        \"mapRoles\": true,\n        \"impersonate\": true,\n        \"manage\": true\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by params",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"taner\",\r\n    \"firstName\" :\"Taner\",\r\n    \"lastName\":\"Saydam\",\r\n    \"email\": \"tanersaydam@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/users?email=tanersaydam@gmail.com&username=taner",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "tanersaydam@gmail.com"
+								},
+								{
+									"key": "username",
+									"value": "taner"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get by params",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"taner\",\r\n    \"firstName\" :\"Taner\",\r\n    \"lastName\":\"Saydam\",\r\n    \"email\": \"tanersaydam@gmail.com\",\r\n    \"enabled\": true,\r\n    \"emailVerified\": true,\r\n    \"credentials\": [\r\n        {\r\n            \"type\": \"password\",\r\n            \"temporary\": false,\r\n            \"value\": \"1\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/users?email=tanersaydam@gmail.com&username=taner",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"users"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "tanersaydam@gmail.com"
+										},
+										{
+											"key": "username",
+											"value": "taner"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "388",
+									"type": "text"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"c9572713-812e-4512-a62f-eefcf10e6394\",\n        \"username\": \"taner\",\n        \"firstName\": \"Taner\",\n        \"lastName\": \"Saydam\",\n        \"email\": \"tanersaydam@gmail.com\",\n        \"emailVerified\": true,\n        \"createdTimestamp\": 1722715131829,\n        \"enabled\": true,\n        \"totp\": false,\n        \"disableableCredentialTypes\": [],\n        \"requiredActions\": [],\n        \"notBefore\": 0,\n        \"access\": {\n            \"manageGroupMembership\": true,\n            \"view\": true,\n            \"mapRoles\": true,\n            \"impersonate\": true,\n            \"manage\": true\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "taner",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host_name}}/realms/{{realm}}/protocol/openid-connect/token",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"realms",
+								"{{realm}}",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "{{client_id}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "{{client_secret}}",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "taner",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host_name}}/realms/{{realm}}/protocol/openid-connect/token",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"realms",
+										"{{realm}}",
+										"protocol",
+										"openid-connect",
+										"token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-store",
+									"type": "text"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "2268",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJobWwxWWNnWWhoN3VSYXlqUnAxaEsydlhxTWY3aXYtOEI4Qy1wSWFsdFE0In0.eyJleHAiOjE3MjI3NTMwNTYsImlhdCI6MTcyMjc1Mjc1NiwianRpIjoiMjc4NzIzMzMtZTI0OC00NjY4LWIwNTAtNGZmOGJkMGQ1MjE5IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9teXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImM5NTcyNzEzLTgxMmUtNDUxMi1hNjJmLWVlZmNmMTBlNjM5NCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im15Y2xpZW50Iiwic2lkIjoiMjE1ZThiN2ItNjRjMy00NWYwLWJiYmUtNWEzNjkyZjQ5Y2NmIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtbXlyZWFsbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im15Y2xpZW50Ijp7InJvbGVzIjpbIlVzZXJVcGRhdGUiLCJ1bWFfcHJvdGVjdGlvbiIsIlVzZXJHZXRBbGwiLCJ0ZXN0X3JvbGVfZm9yX2NsaWVudCIsIlVzZXJDcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoiVGFuZXIgU2F5ZGFtIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGFuZXIiLCJnaXZlbl9uYW1lIjoiVGFuZXIiLCJmYW1pbHlfbmFtZSI6IlNheWRhbSIsImVtYWlsIjoidGFuZXJzYXlkYW1AZ21haWwuY29tIn0.bQPVf0Se7FwzuUVKSrWp7MKoSmOAJkEJA1SUrrpA7cqU3GRfCbI1SrBwPjCEDOx6miD512evCVzEUxm4t4zVpy1K_36d5CRlVs9RMvEVf_IP4aLC2gyLQ1mDQw5KLS9fad27qM4SVNUPkWdfMHZVtWYwm2LvMECOR1c3BuxqogUOLQ8YNrAyJQ_udt0GUJhxZN83mncJieNxlEgye4y0w37z0NBC8QUHwGpk80OtcWsivZ90PBznxocML_sxISazhNY2OV3LwtMO1Nfkc_b02QHSceFWv4cWtuFbv_78c1Uo0R055HbK0RnRhnJFe7yRyVgKoqdNoyXCTKmOazqMEQ\",\n    \"expires_in\": 300,\n    \"refresh_expires_in\": 1800,\n    \"refresh_token\": \"eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIxMTAyYTY4Yi0zZTU2LTQ5ZmUtODliYS1jODQxOTJhZDQwMWEifQ.eyJleHAiOjE3MjI3NTQ1NTYsImlhdCI6MTcyMjc1Mjc1NiwianRpIjoiNDhmNzJmNWQtZDYxNi00NGZhLTgxNGQtOTlmMzdhYmM2ZmZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9teXJlYWxtIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9teXJlYWxtIiwic3ViIjoiYzk1NzI3MTMtODEyZS00NTEyLWE2MmYtZWVmY2YxMGU2Mzk0IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6Im15Y2xpZW50Iiwic2lkIjoiMjE1ZThiN2ItNjRjMy00NWYwLWJiYmUtNWEzNjkyZjQ5Y2NmIiwic2NvcGUiOiJwcm9maWxlIGFjciBlbWFpbCBiYXNpYyB3ZWItb3JpZ2lucyByb2xlcyJ9.WTMpJ38C0vWbormyspgG0XzGVSYM8VDGwZfNHxHyG7GoT4X5cwavKMNyAW3JuKW6nfZIki1ke4jPyaH1vQBmfg\",\n    \"token_type\": \"Bearer\",\n    \"not-before-policy\": 0,\n    \"session_state\": \"215e8b7b-64c3-45f0-bbbe-5a3692f49ccf\",\n    \"scope\": \"profile email\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Create for client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test_role_for_client\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/clients/{{client_uuid}}/roles",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"clients",
+								"{{client_uuid}}",
+								"roles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create for client",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test_role_for_client2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/clients/{{client_uuid}}/roles",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"clients",
+										"{{client_uuid}}",
+										"roles"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/admin/realms/myrealm/clients/86014b33-fe83-4483-970a-ca62786fec14/roles/test_role_for_client2",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "0",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Create for realm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test_role_for_realm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/roles",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"roles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create for realm",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test_role_for_realm2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/roles",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"roles"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/admin/realms/myrealm/roles/test_role_for_realm2",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "0",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/clients/{{client_uuid}}/roles",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"clients",
+								"{{client_uuid}}",
+								"roles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/clients/{{client_uuid}}/roles",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"clients",
+										"{{client_uuid}}",
+										"roles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "1013",
+									"type": "text"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"9409601e-c001-46aa-a724-93812939deec\",\n        \"name\": \"UserDelete\",\n        \"description\": \"\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    },\n    {\n        \"id\": \"209d3fa2-10f4-43c1-9ace-ac639834dc09\",\n        \"name\": \"UserGetAll\",\n        \"description\": \"\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    },\n    {\n        \"id\": \"63991586-c908-4dd7-83fd-aed7daa92d7d\",\n        \"name\": \"UserUpdate\",\n        \"description\": \"\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    },\n    {\n        \"id\": \"420d5b8c-0ffc-4341-87aa-13218b50722c\",\n        \"name\": \"test_role_for_client\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    },\n    {\n        \"id\": \"e1bb3282-7593-437f-866a-b13936c18fd9\",\n        \"name\": \"UserCreate\",\n        \"description\": \"\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    },\n    {\n        \"id\": \"1f0584c5-a811-4216-8f07-33ec60c1a0c2\",\n        \"name\": \"uma_protection\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete by name",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/clients/{{client_uuid}}/roles/create",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"clients",
+								"{{client_uuid}}",
+								"roles",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete by name",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/clients/{{client_uuid}}/roles/test_role_for_client",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"clients",
+										"{{client_uuid}}",
+										"roles",
+										"test_role_for_client"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get by name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/clients/{{client_uuid}}/roles/test_role",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"clients",
+								"{{client_uuid}}",
+								"roles",
+								"test_role"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get by name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/clients/{{client_uuid}}/roles/test_role_for_client",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"clients",
+										"{{client_uuid}}",
+										"roles",
+										"test_role_for_client"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "180",
+									"type": "text"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"26c8b469-aff0-4ff9-b2e3-79eb3659e4aa\",\n    \"name\": \"test_role_for_client\",\n    \"composite\": false,\n    \"clientRole\": true,\n    \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\",\n    \"attributes\": {}\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Roles",
+			"item": [
+				{
+					"name": "Assignment roles by user id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n         \"id\": \"420d5b8c-0ffc-4341-87aa-13218b50722c\",\r\n        \"name\": \"test_role_for_client\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/users/c9572713-812e-4512-a62f-eefcf10e6394/role-mappings/clients/{{client_uuid}}",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"users",
+								"c9572713-812e-4512-a62f-eefcf10e6394",
+								"role-mappings",
+								"clients",
+								"{{client_uuid}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Assignment roles by user id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n         \"id\": \"26c8b469-aff0-4ff9-b2e3-79eb3659e4aa\",\r\n        \"name\": \"test_role_for_client\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/users/c9572713-812e-4512-a62f-eefcf10e6394/role-mappings/clients/{{client_uuid}}",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"users",
+										"c9572713-812e-4512-a62f-eefcf10e6394",
+										"role-mappings",
+										"clients",
+										"{{client_uuid}}"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "UnAssignment roles by user id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n         \"id\": \"420d5b8c-0ffc-4341-87aa-13218b50722c\",\r\n        \"name\": \"test_role_for_client\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/users/c9572713-812e-4512-a62f-eefcf10e6394/role-mappings/clients/{{client_uuid}}",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"users",
+								"c9572713-812e-4512-a62f-eefcf10e6394",
+								"role-mappings",
+								"clients",
+								"{{client_uuid}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UnAssignment roles by user id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n         \"id\": \"26c8b469-aff0-4ff9-b2e3-79eb3659e4aa\",\r\n        \"name\": \"test_role_for_client\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/users/c9572713-812e-4512-a62f-eefcf10e6394/role-mappings/clients/{{client_uuid}}",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"users",
+										"c9572713-812e-4512-a62f-eefcf10e6394",
+										"role-mappings",
+										"clients",
+										"{{client_uuid}}"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get all user roles by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/users/c9572713-812e-4512-a62f-eefcf10e6394/role-mappings/clients/{{client_uuid}}",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"users",
+								"c9572713-812e-4512-a62f-eefcf10e6394",
+								"role-mappings",
+								"clients",
+								"{{client_uuid}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all user roles by user id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/users/c9572713-812e-4512-a62f-eefcf10e6394/role-mappings/clients/{{client_uuid}}",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"users",
+										"c9572713-812e-4512-a62f-eefcf10e6394",
+										"role-mappings",
+										"clients",
+										"{{client_uuid}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "676",
+									"type": "text"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"63991586-c908-4dd7-83fd-aed7daa92d7d\",\n        \"name\": \"UserUpdate\",\n        \"description\": \"\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    },\n    {\n        \"id\": \"209d3fa2-10f4-43c1-9ace-ac639834dc09\",\n        \"name\": \"UserGetAll\",\n        \"description\": \"\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    },\n    {\n        \"id\": \"1f0584c5-a811-4216-8f07-33ec60c1a0c2\",\n        \"name\": \"uma_protection\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    },\n    {\n        \"id\": \"e1bb3282-7593-437f-866a-b13936c18fd9\",\n        \"name\": \"UserCreate\",\n        \"description\": \"\",\n        \"composite\": false,\n        \"clientRole\": true,\n        \"containerId\": \"86014b33-fe83-4483-970a-ca62786fec14\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Groups",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"new_group\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/groups",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"groups"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"new_group2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/groups",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"groups"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/admin/realms/myrealm/groups/ad703a83-cd30-4871-b4b7-8074866b37ad",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "0",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_name}}/admin/realms/{{realm}}/groups",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"admin",
+								"realms",
+								"{{realm}}",
+								"groups"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host_name}}/admin/realms/{{realm}}/groups",
+									"host": [
+										"{{host_name}}"
+									],
+									"path": [
+										"admin",
+										"realms",
+										"{{realm}}",
+										"groups"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "437",
+									"type": "text"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"type": "text"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer",
+									"type": "text"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains",
+									"type": "text"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"type": "text"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN",
+									"type": "text"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"2256f8f4-a1f3-407a-81c1-01eab13e1d9b\",\n        \"name\": \"muhasebe\",\n        \"path\": \"/muhasebe\",\n        \"subGroupCount\": 0,\n        \"subGroups\": [],\n        \"access\": {\n            \"view\": true,\n            \"viewMembers\": true,\n            \"manageMembers\": true,\n            \"manage\": true,\n            \"manageMembership\": true\n        }\n    },\n    {\n        \"id\": \"919d5fde-f19f-4b2a-b907-75de11991291\",\n        \"name\": \"new_group\",\n        \"path\": \"/new_group\",\n        \"subGroupCount\": 0,\n        \"subGroups\": [],\n        \"access\": {\n            \"view\": true,\n            \"viewMembers\": true,\n            \"manageMembers\": true,\n            \"manage\": true,\n            \"manageMembership\": true\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Access Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"access_token\",pm.response.json().access_token)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{client_id}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{client_secret}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host_name}}/realms/{{realm}}/protocol/openid-connect/token",
+					"host": [
+						"{{host_name}}"
+					],
+					"path": [
+						"realms",
+						"{{realm}}",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Access Token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host_name}}/realms/{{realm}}/protocol/openid-connect/token",
+							"host": [
+								"{{host_name}}"
+							],
+							"path": [
+								"realms",
+								"{{realm}}",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-store",
+							"type": "text"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"type": "text"
+						},
+						{
+							"key": "content-length",
+							"value": "1897",
+							"type": "text"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer",
+							"type": "text"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains",
+							"type": "text"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"type": "text"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"type": "text"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJobWwxWWNnWWhoN3VSYXlqUnAxaEsydlhxTWY3aXYtOEI4Qy1wSWFsdFE0In0.eyJleHAiOjE3MjI3NTI4NTUsImlhdCI6MTcyMjc1MjU1NSwianRpIjoiYjAxODNjYzctNTEyMi00ZGE5LWE4OTMtODJkNmEyZGZlMzMzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9teXJlYWxtIiwiYXVkIjpbInJlYWxtLW1hbmFnZW1lbnQiLCJhY2NvdW50Il0sInN1YiI6ImQ2NDdjYzFiLWU4OTktNDNmYS04YzdhLWFlODc0MGU5OTIzNiIsInR5cCI6IkJlYXJlciIsImF6cCI6Im15Y2xpZW50IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtbXlyZWFsbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InJlYWxtLW1hbmFnZW1lbnQiOnsicm9sZXMiOlsidmlldy1yZWFsbSIsInZpZXctaWRlbnRpdHktcHJvdmlkZXJzIiwibWFuYWdlLWlkZW50aXR5LXByb3ZpZGVycyIsImltcGVyc29uYXRpb24iLCJyZWFsbS1hZG1pbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibXljbGllbnQiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiY2xpZW50SG9zdCI6IjE3Mi4xNy4wLjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbXljbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSIsImNsaWVudF9pZCI6Im15Y2xpZW50In0.ZDRrITE1saNQYqYO9yF02gjJ3nK2NY9rFlO_XZi9Sehw84J1Ue8KSY9Q7NAA10FekTiqj-AJX1dK2tuSG4fSG6H2jvbYZhvS7G9CGJV_B8lAEKjNhIicwc1VY4zJIIY4PyZoqZiGj9v46bmkUEOf9mp3G4yKQV1MvrJr6dPjiWaEth6WQL__cppx_AfqJdzt_SYjFrw3XXWnsznwqiVt2yonWfJ7fj95GwbkkQN0EOMmQJ_YMcnEgMKzfAghs6BVXE3kUVbhDPV0DdPu15J2Wp3uXgAEx3ft1Qn7j6mBpSsQ-2o-xsW-su7Xu-lPIz8-KCr3kWF0n9GczF93GWaYrA\",\n    \"expires_in\": 300,\n    \"refresh_expires_in\": 0,\n    \"token_type\": \"Bearer\",\n    \"not-before-policy\": 0,\n    \"scope\": \"profile email\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "host_name",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "realm",
+			"value": "myrealm",
+			"type": "string"
+		},
+		{
+			"key": "client_id",
+			"value": "myclient",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "g6v3Jyd9RBWPL86DpxW7uoUNLAhNM3NP",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "client_uuid",
+			"value": "86014b33-fe83-4483-970a-ca62786fec14",
+			"type": "string"
+		}
+	]
+}

@@ -1,24 +1,26 @@
 ﻿using System.Linq.Expressions;
 using CleanArchitecture.Domain.Abstractions;
+using CleanArchitecture.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.Infrastructure.Repositories;
-public class Repository<T> : IRepository<T>
+internal class Repository<T>(
+    ApplicationDbContext dbContext) : IRepository<T>
+    where T : class
 {
-    public Task<bool> AnyAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
+    public async Task<bool> AnyAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
     {
-        return Task.FromResult(true);
-        //throw new NotImplementedException();
+        return await dbContext.Set<T>().AnyAsync(predicate, cancellationToken);
     }
 
     public async Task CreateAsync(T entity, CancellationToken cancellationToken = default)
     {
-        await Task.CompletedTask;
-        //throw new NotImplementedException();
+        await dbContext.AddAsync(entity, cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
     }
 
-    public List<T> GetAll()
+    public IQueryable<T> GetAll()
     {
-        return new();
-        //throw new NotImplementedException();
+        return dbContext.Set<T>().AsQueryable();
     }
 }
