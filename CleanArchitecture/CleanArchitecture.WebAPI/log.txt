@@ -1,0 +1,28 @@
+2025-05-10 15:55:41.428 +03:00 [INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-10 15:55:41.539 +03:00 [INF] Now listening on: https://localhost:7009
+2025-05-10 15:55:41.540 +03:00 [INF] Now listening on: http://localhost:5089
+2025-05-10 15:55:41.557 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 15:55:41.557 +03:00 [INF] Hosting environment: Development
+2025-05-10 15:55:41.558 +03:00 [INF] Content root path: C:\BilgincITAcademy-EnterpriseDesignPatterns-Egitimi\CleanArchitecture\CleanArchitecture.WebAPI
+2025-05-10 15:55:42.710 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/scalar/v1 - null null
+2025-05-10 15:55:42.793 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-05-10 15:55:42.811 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2025-05-10 15:55:42.821 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-05-10 15:55:42.824 +03:00 [WRN] Unable to configure Browser Link script injection on the response. This may have been caused by the response's Content-Encoding: '["br"]'. Consider disabling response compression.
+2025-05-10 15:55:42.827 +03:00 [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["br"]'. Consider disabling response compression.
+2025-05-10 15:55:42.828 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/scalar/v1 - 200 null text/html 119.3675ms
+2025-05-10 15:55:42.845 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/scalar/scalar.aspnetcore.js - null null
+2025-05-10 15:55:42.845 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/scalar/scalar.js - null null
+2025-05-10 15:55:42.851 +03:00 [INF] CORS policy execution successful.
+2025-05-10 15:55:42.851 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2025-05-10 15:55:42.853 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2025-05-10 15:55:42.856 +03:00 [INF] Setting HTTP status code 304.
+2025-05-10 15:55:42.856 +03:00 [INF] Setting HTTP status code 304.
+2025-05-10 15:55:42.857 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2025-05-10 15:55:42.857 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2025-05-10 15:55:42.858 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/scalar/scalar.js - 304 null null 13.0845ms
+2025-05-10 15:55:42.860 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/scalar/scalar.aspnetcore.js - 304 null null 14.4278ms
+2025-05-10 15:55:43.001 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/openapi/v1.json - null null
+2025-05-10 15:55:43.003 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-05-10 15:55:43.060 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-05-10 15:55:43.061 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/openapi/v1.json - 200 null application/json;charset=utf-8 60.7144ms

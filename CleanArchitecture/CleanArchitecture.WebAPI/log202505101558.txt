@@ -1,0 +1,15 @@
+2025-05-10 15:58:40.441 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7009/products - application/json 26
+2025-05-10 15:58:40.447 +03:00 [INF] CORS policy execution successful.
+2025-05-10 15:58:40.448 +03:00 [INF] Executing endpoint 'HTTP: POST products/'
+2025-05-10 15:58:40.896 +03:00 [INF] Saved 1 entities to in-memory store.
+2025-05-10 15:58:40.901 +03:00 [INF] Setting HTTP status code 200.
+2025-05-10 15:58:40.903 +03:00 [INF] Writing value of type 'Result`1' as Json.
+2025-05-10 15:58:40.905 +03:00 [INF] Executed endpoint 'HTTP: POST products/'
+2025-05-10 15:58:40.908 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7009/products - 200 null application/json; charset=utf-8 467.3037ms
+2025-05-10 15:58:42.486 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7009/products - application/json 26
+2025-05-10 15:58:42.488 +03:00 [INF] CORS policy execution successful.
+2025-05-10 15:58:42.489 +03:00 [INF] Executing endpoint 'HTTP: POST products/'
+2025-05-10 15:58:42.538 +03:00 [INF] Setting HTTP status code 400.
+2025-05-10 15:58:42.539 +03:00 [INF] Writing value of type 'Result`1' as Json.
+2025-05-10 15:58:42.540 +03:00 [INF] Executed endpoint 'HTTP: POST products/'
+2025-05-10 15:58:42.541 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7009/products - 400 null application/json; charset=utf-8 55.6715ms

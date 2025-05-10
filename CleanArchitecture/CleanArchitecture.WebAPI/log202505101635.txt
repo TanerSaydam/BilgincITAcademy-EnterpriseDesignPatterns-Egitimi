@@ -1,0 +1,37 @@
+2025-05-10 16:35:13.135 +03:00 [INF] User profile is available. Using 'C:\Users\PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-10 16:35:13.309 +03:00 [INF] Now listening on: https://localhost:7009
+2025-05-10 16:35:13.310 +03:00 [INF] Now listening on: http://localhost:5089
+2025-05-10 16:35:13.335 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 16:35:13.335 +03:00 [INF] Hosting environment: Development
+2025-05-10 16:35:13.336 +03:00 [INF] Content root path: C:\BilgincITAcademy-EnterpriseDesignPatterns-Egitimi\CleanArchitecture\CleanArchitecture.WebAPI
+2025-05-10 16:35:14.735 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/scalar/v1 - null null
+2025-05-10 16:35:14.847 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-05-10 16:35:14.872 +03:00 [INF] Write content with HTTP Response ContentType of text/html
+2025-05-10 16:35:14.888 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2025-05-10 16:35:14.892 +03:00 [WRN] Unable to configure Browser Link script injection on the response. This may have been caused by the response's Content-Encoding: '["br"]'. Consider disabling response compression.
+2025-05-10 16:35:14.895 +03:00 [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["br"]'. Consider disabling response compression.
+2025-05-10 16:35:14.898 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/scalar/v1 - 200 null text/html 166.7733ms
+2025-05-10 16:35:14.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/scalar/scalar.js - null null
+2025-05-10 16:35:14.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/scalar/scalar.aspnetcore.js - null null
+2025-05-10 16:35:14.917 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2025-05-10 16:35:14.921 +03:00 [INF] CORS policy execution successful.
+2025-05-10 16:35:14.924 +03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2025-05-10 16:35:14.924 +03:00 [INF] Setting HTTP status code 304.
+2025-05-10 16:35:14.925 +03:00 [INF] Setting HTTP status code 304.
+2025-05-10 16:35:14.925 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2025-05-10 16:35:14.926 +03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2025-05-10 16:35:14.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/scalar/scalar.js - 304 null null 14.2221ms
+2025-05-10 16:35:14.927 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/scalar/scalar.aspnetcore.js - 304 null null 14.1715ms
+2025-05-10 16:35:15.059 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/openapi/v1.json - null null
+2025-05-10 16:35:15.062 +03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-05-10 16:35:15.131 +03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2025-05-10 16:35:15.132 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/openapi/v1.json - 200 null application/json;charset=utf-8 72.8065ms
+2025-05-10 16:35:19.239 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7009/api/Values - application/json 26
+2025-05-10 16:35:19.242 +03:00 [INF] CORS policy execution successful.
+2025-05-10 16:35:19.242 +03:00 [INF] Executing endpoint 'CleanArchitecture.WebAPI.Controllers.ValuesController.Test (CleanArchitecture.WebAPI)'
+2025-05-10 16:35:19.251 +03:00 [INF] Route matched with {action = "Test", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Test(CleanArchitecture.Application.Products.ProductCreateCommandRequest) on controller CleanArchitecture.WebAPI.Controllers.ValuesController (CleanArchitecture.WebAPI).
+2025-05-10 16:35:50.804 +03:00 [INF] Authorization failed for the request at filter 'CleanArchitecture.WebAPI.Filters.MyAuthorizeAttribute'.
+2025-05-10 16:35:50.813 +03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-05-10 16:35:50.823 +03:00 [INF] Executed action CleanArchitecture.WebAPI.Controllers.ValuesController.Test (CleanArchitecture.WebAPI) in 31570.1969ms
+2025-05-10 16:35:50.824 +03:00 [INF] Executed endpoint 'CleanArchitecture.WebAPI.Controllers.ValuesController.Test (CleanArchitecture.WebAPI)'
+2025-05-10 16:35:50.825 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7009/api/Values - 401 null application/problem+json; charset=utf-8 31586.1585ms

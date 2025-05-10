@@ -1,0 +1,33 @@
+2025-05-10 16:06:01.675 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7009/products - application/json 26
+2025-05-10 16:06:01.678 +03:00 [INF] CORS policy execution successful.
+2025-05-10 16:06:01.679 +03:00 [INF] Executing endpoint 'HTTP: POST products/'
+2025-05-10 16:06:02.043 +03:00 [INF] Saved 1 entities to in-memory store.
+2025-05-10 16:06:02.048 +03:00 [INF] Setting HTTP status code 200.
+2025-05-10 16:06:02.049 +03:00 [INF] Writing value of type 'Result`1' as Json.
+2025-05-10 16:06:02.051 +03:00 [INF] Executed endpoint 'HTTP: POST products/'
+2025-05-10 16:06:02.054 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7009/products - 200 null application/json; charset=utf-8 379.3495ms
+2025-05-10 16:06:04.931 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/products - null null
+2025-05-10 16:06:04.933 +03:00 [INF] Executing endpoint 'HTTP: GET products/'
+2025-05-10 16:06:04.961 +03:00 [INF] Setting HTTP status code 200.
+2025-05-10 16:06:04.962 +03:00 [INF] Writing value of type 'List`1' as Json.
+2025-05-10 16:06:04.963 +03:00 [INF] Executed endpoint 'HTTP: GET products/'
+2025-05-10 16:06:04.964 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/products - 200 null application/json; charset=utf-8 32.7911ms
+2025-05-10 16:06:05.382 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/products - null null
+2025-05-10 16:06:05.384 +03:00 [INF] Executing endpoint 'HTTP: GET products/'
+2025-05-10 16:06:05.398 +03:00 [INF] Setting HTTP status code 200.
+2025-05-10 16:06:05.399 +03:00 [INF] Writing value of type 'List`1' as Json.
+2025-05-10 16:06:05.399 +03:00 [INF] Executed endpoint 'HTTP: GET products/'
+2025-05-10 16:06:05.400 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/products - 200 null application/json; charset=utf-8 18.3943ms
+2025-05-10 16:06:05.721 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7009/products - null null
+2025-05-10 16:06:05.724 +03:00 [INF] Executing endpoint 'HTTP: GET products/'
+2025-05-10 16:06:05.727 +03:00 [INF] Setting HTTP status code 200.
+2025-05-10 16:06:05.727 +03:00 [INF] Writing value of type 'List`1' as Json.
+2025-05-10 16:06:05.728 +03:00 [INF] Executed endpoint 'HTTP: GET products/'
+2025-05-10 16:06:05.729 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7009/products - 200 null application/json; charset=utf-8 7.161ms
+2025-05-10 16:06:08.264 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7009/products - application/json 26
+2025-05-10 16:06:08.266 +03:00 [INF] CORS policy execution successful.
+2025-05-10 16:06:08.267 +03:00 [INF] Executing endpoint 'HTTP: POST products/'
+2025-05-10 16:06:08.269 +03:00 [INF] Setting HTTP status code 400.
+2025-05-10 16:06:08.269 +03:00 [INF] Writing value of type 'Result`1' as Json.
+2025-05-10 16:06:08.270 +03:00 [INF] Executed endpoint 'HTTP: POST products/'
+2025-05-10 16:06:08.271 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7009/products - 400 null application/json; charset=utf-8 6.4869ms

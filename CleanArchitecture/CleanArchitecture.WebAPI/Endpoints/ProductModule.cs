@@ -1,4 +1,5 @@
 ﻿using CleanArchitecture.Application.Products;
+using CleanArchitecture.Domain.Abstractions;
 using MediatR;
 
 namespace CleanArchitecture.WebAPI.Endpoints;
@@ -7,7 +8,9 @@ public static class ProductModule
 {
     public static IEndpointRouteBuilder MapProducts(this IEndpointRouteBuilder builder)
     {
-        var app = builder.MapGroup("products").RequireAuthorization().RequireRateLimiting("fixed");
+        var app = builder.MapGroup("products")
+            .RequireRateLimiting("fixed");
+        //.RequireAuthorization();
 
         app.MapPost(string.Empty,
             async (
@@ -16,9 +19,9 @@ public static class ProductModule
                 CancellationToken cancellationToken) =>
             {
                 var res = await sender.Send(request, cancellationToken);
-                return Results.Ok(res);
+                return res.IsSuccessful ? Results.Ok(res) : Results.BadRequest(res);
             })
-            .Produces<Guid>();
+            .Produces<Result<Guid>>();
 
         app.MapGet(string.Empty,
             async (
